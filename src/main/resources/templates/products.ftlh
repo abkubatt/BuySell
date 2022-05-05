@@ -4,7 +4,11 @@
     <title>BUYSELL</title>
 </head>
 <body>
-<h1>BUYSELL</h1><hr>
+<h1>BUYSELL | <a href="/login">Войти</a> </h1><hr>
+<form action="/logout" method="post">
+    <input type="hidden" name="_csrf" value="${_csrf.token}">
+    <input type="submit" value="Выйти"/>
+</form>
 Товары со всей Кыргызстана</h4>
 <form action="/" method="get">
     Поиск по названию обьявления: <input type="text" name="title"><br>

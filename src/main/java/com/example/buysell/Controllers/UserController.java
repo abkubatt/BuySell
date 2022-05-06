@@ -16,25 +16,26 @@ public class UserController {
     private UserService userService;
 
     @GetMapping("/login")
-    public String login(){
+    public String login() {
         return "login";
     }
 
     @GetMapping("/registration")
-    public String registration(){
-         return "registration";
+    public String registration() {
+        return "registration";
     }
 
     @PostMapping("/registration")
-    public String createUser(User user, Model model){
-        if (!userService.createUser(user)){
+    public String createUser(User user, Model model) {
+        if (!userService.createUser(user)) {
             model.addAttribute("errorMessage", "Ползователь с emil: " + user.getEmail() + "уже существуеть");
             return "registration";
         }
         return "redirect:/login";
     }
+
     @GetMapping("/hello")
-    public String securityUrl(){
+    public String securityUrl() {
         return "Hello";
     }
 

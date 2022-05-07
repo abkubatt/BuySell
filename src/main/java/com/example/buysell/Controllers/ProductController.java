@@ -33,6 +33,7 @@ public class ProductController {
     public String productInfo(@PathVariable Long id, Model model, Principal principal) {
         Product product = productService.getProductById(id);
         model.addAttribute("user", productService.getUserByPrincipal(principal));
+        model.addAttribute("principal", principal);
         model.addAttribute("product", product);
         model.addAttribute("images", product.getImages());
         model.addAttribute("authorProduct", product.getUser());
@@ -49,7 +50,7 @@ public class ProductController {
     @PostMapping("/product/delete/{id}")
     public String deleteProduct(@PathVariable Long id, Principal principal) {
         productService.deleteProduct(productService.getUserByPrincipal(principal), id);
-        return "redirect:/my/products";
+        return "redirect:/";
     }
 
     @GetMapping("/my/products")

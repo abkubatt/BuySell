@@ -28,13 +28,13 @@
                 <select id="searchCity" required name="city" class="form-control">
                     <option value="">Город не выбран</option>
 
-                    <option value="Москва">Бишкек</option>
-                    <option value="Красноярск">Ош</option>
-                    <option value="Казань">Баткен</option>
-                    <option value="Казань">Жалал-Абад</option>
-                    <option value="Казань">Нарын</option>
-                    <option value="Казань">Талас</option>
-                    <option value="Казань">Ыссык-Көл</option>
+                    <option value="Бишкек">Бишкек</option>
+                    <option value="Ош">Ош</option>
+                    <option value="Баткен">Баткен</option>
+                    <option value="Жалал-Абад">Жалал-Абад</option>
+                    <option value="Нарын">Нарын</option>
+                    <option value="Талас">Талас</option>
+                    <option value="Ыссык-Көл">Ыссык-Көл</option>
 
                 </select>
             </div>
